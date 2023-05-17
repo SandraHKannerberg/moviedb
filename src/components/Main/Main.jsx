@@ -1,7 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { MovieList } from '../MovieList/MovieList';
+import { MovieDetails } from '../MovieDetails/MovieDetails';
+import { About } from '../About/About';
+import { Contact } from '../Contact/Contact';
 
-export const Main = () => {
+function Main () {
   return (
-    <div><h1>Main</h1></div>
+    <main>
+      <MovieList/>
+      <MovieDetails/>
+      <About/>
+      <Contact/>
+    </main>
   )
 }
+
+export default Main

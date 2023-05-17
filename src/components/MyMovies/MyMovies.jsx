@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const MyMovies = () => {
+function MyMovies () {
   return (
     <div><h1>MyMovies</h1></div>
   )
 }
+
+export default MyMovies

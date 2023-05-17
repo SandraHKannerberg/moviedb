@@ -1,14 +1,15 @@
-import React from 'react'
-import { FilterDropdown } from '../FilterDropDown/FilterDropDown';
-import { MovieCard } from '../MovieCard/MovieCard';
+import FilterDropdown from '../FilterDropDown/FilterDropDown';
+import MovieCard from '../MovieCard/MovieCard';
 
 
-export const MovieList = () => {
+function MovieList() {
   return (
     <div>
       <h1>MovieList</h1>
       <FilterDropdown/>
       <MovieCard/>
     </div>
-  )
+  );
 }
+
+export default MovieList;

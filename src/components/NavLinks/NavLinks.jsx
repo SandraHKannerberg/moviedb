@@ -1,10 +1,12 @@
-import React from 'react'
-
 function NavLinks() {
   return (
-    <div><h1>NavLinks</h1></div>
+    <ul>
+      <li>Movies</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
   )
 }
 
-export default NavLinks
+export default NavLinks;
 

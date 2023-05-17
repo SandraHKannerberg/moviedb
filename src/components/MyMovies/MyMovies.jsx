@@ -1,9 +1,9 @@
-import React from 'react'
-
 function MyMovies () {
   return (
-    <div><h1>MyMovies</h1></div>
-  )
+    <div>
+      <i class="fa-sharp fa-solid fa-eye"></i>
+    </div>
+  );
 }
 
-export default MyMovies
+export default MyMovies;

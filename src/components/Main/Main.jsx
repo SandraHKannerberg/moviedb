@@ -1,7 +1,20 @@
-import React from 'react'
+import MovieList from '../MovieList/MovieList';
+import MovieDetails from '../MovieDetails/MovieDetails';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
+import { Routes, Route } from 'react-router-dom';
 
-export const Main = () => {
+function Main () {
   return (
-    <div><h1>Main</h1></div>
-  )
+    <main>
+      <Routes>
+        <Route path='/' element={<MovieList />} />
+        <Route path='/:id' element={<MovieDetails />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+    </main>
+  );
 }
+
+export default Main;

@@ -1,7 +1,7 @@
-import React from 'react'
-
-export const MarkAsSeenBtn = () => {
+function MarkAsSeenBtn () {
   return (
-    <div><h1>MarkAsSeenBtn</h1></div>
+    <button>Seen it</button>
   )
 }
+
+export default MarkAsSeenBtn

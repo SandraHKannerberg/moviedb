@@ -1,7 +1,23 @@
-import React from 'react'
+import "./NavLinks.css";
+import { NavLink } from 'react-router-dom'
 
-export const NavLinks = () => {
+function NavLinks() {
   return (
-    <div><h1>NavLinks</h1></div>
+    <ul>
+      <NavLink to='/'>
+        <li>Movies</li>
+      </NavLink>
+
+      <NavLink to='/about'>
+        <li>About</li>
+      </NavLink>
+
+      <NavLink to='/contact'>
+        <li>Contact</li>
+      </NavLink>
+    </ul>
   )
 }
+
+export default NavLinks;
+

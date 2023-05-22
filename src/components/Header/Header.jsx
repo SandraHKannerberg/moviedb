@@ -1,7 +1,19 @@
-import React from 'react'
+import NavLinks from '../NavLinks/NavLinks'
+import MyMovies from '../MyMovies/MyMovies'
+import './Header.css'
 
-export const Header = () => {
+function Header() {
   return (
-    <div><h1>Header</h1></div>
+    <header>
+      <h1>Movie<span>DB</span></h1>
+
+      <div>
+        <NavLinks />
+        <MyMovies />
+      </div>
+
+    </header>
   )
 }
+
+export default Header;

@@ -1,7 +1,9 @@
-import React from 'react'
-
-export const Footer = () => {
+function Footer () {
   return (
-    <div><h1>Footer</h1></div>
+    <footer>
+      <p>Copyright &copy; MovieDB 2023, Sandra Höst Kannerberg</p>
+    </footer>
   )
 }
+
+export default Footer

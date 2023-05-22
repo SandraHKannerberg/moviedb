@@ -1,7 +1,14 @@
-import React from 'react'
+import "./MyMovies.css";
 
-export const MyMovies = () => {
+import { FiEye } from "react-icons/fi";
+
+function MyMovies() {
   return (
-    <div><h1>MyMovies</h1></div>
-  )
+    <div className='my_movies'>
+      <p>0</p>
+      <FiEye />
+    </div>
+  );
 }
+
+export default MyMovies;

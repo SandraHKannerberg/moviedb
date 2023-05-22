@@ -5,9 +5,9 @@ import './Header.css'
 function Header() {
   return (
     <header>
-      <h1>MovieDB</h1>
+      <h1>Movie<span>DB</span></h1>
 
-      <div className="nav-container">
+      <div>
         <NavLinks />
         <MyMovies />
       </div>

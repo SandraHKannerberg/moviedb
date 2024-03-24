@@ -1,11 +1,16 @@
 ul {
-    display: flex;
-    list-style-type: none;
-    gap: 0.8rem;
-    margin-right: 0.8rem;
-    text-transform: uppercase;
-  }
-  
-  .active {
-    border-bottom: 2px solid rgb(232, 232, 146);
-  }
+  display: flex;
+  list-style-type: none;
+  gap: 0.8rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+a {
+  margin-bottom: 0;
+}
+
+.active {
+  border-bottom: 2px solid #FF7C60;
+}

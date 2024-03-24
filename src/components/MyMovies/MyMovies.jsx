@@ -11,9 +11,10 @@ function MyMovies() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const myMoviesFromStorage = JSON.parse(localStorage.getItem("myMovies"));
+
   useEffect(() => {
     const handleStorageChange = () => {
-      const myMoviesFromStorage = JSON.parse(localStorage.getItem("myMovies"));
       if (myMoviesFromStorage) {
         setNumberOfMovies(myMoviesFromStorage.length);
       } else {
@@ -50,11 +51,43 @@ function MyMovies() {
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>My Movies</Offcanvas.Title>
+          <Offcanvas.Title>My Favorite Movies</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          {myMoviesFromStorage.map((movie) => (
+            <div
+              key={movie.id}
+              style={{
+                display: "flex",
+                gap: "0.5rem",
+                alignItems: "center",
+                marginBottom: "0.5rem",
+                height: "50px",
+                backgroundColor: "yellow",
+              }}
+            >
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${movie.image}`}
+                alt={movie.title}
+                height="50"
+              />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  height: "100%",
+                  margin: 0,
+                  padding: 0,
+                }}
+              >
+                <p>{movie.title}</p>
+                <p>
+                  <i className="fa-solid fa-xmark"></i> Delete
+                </p>
+              </div>
+            </div>
+          ))}
         </Offcanvas.Body>
       </Offcanvas>
     </>

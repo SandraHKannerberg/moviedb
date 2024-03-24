@@ -28,6 +28,9 @@ function MarkAsSeenBtn({ movie }) {
         "isMovieSeen_" + currentMovie.id,
         JSON.stringify(true)
       );
+
+      const updateMyMoviesEvent = new CustomEvent("updateMyMovies");
+      window.dispatchEvent(updateMyMoviesEvent);
     } else {
       // If yes - don't add it again
       console.log(`${currentMovie.title} finns redan i listan.`);

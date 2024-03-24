@@ -22,10 +22,7 @@ const MovieProvider = ({ children }) => {
       (movieItem) => movieItem.id === item.id
     );
 
-    if (isMovieSeen) {
-      console.log("Finns redan i listan");
-      window.alert(`You already seen ${item.title}.`); // Make it a better alert
-    } else {
+    if (!isMovieSeen) {
       setMovieItems([...movieItems, { ...item, quantity: 1 }]);
     }
   };

@@ -31,7 +31,7 @@ function MovieList() {
       <h2>Popular movies</h2>
       <div className="movie_grid">
       {movies.map((movie) => (
-          <Link to={`/${movie.id}`} key={movie.id}>
+          <Link to={`${movie.id}`} key={movie.id}>
             <MovieCard movie={movie} />
           </Link>
         ))}

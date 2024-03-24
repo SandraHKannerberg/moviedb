@@ -1,10 +1,19 @@
-function FilterDropDown (){
+import Form from "react-bootstrap/Form";
+import "./FilterDropDown.css";
+
+function FilterDropDown({ filter, setFilter }) {
   return (
-    <select name="dropdown" id="dropdown">
-      <option value="Popular">Popular</option>
-      <option value="Top Rated">Top Rated</option>
-      <option value="Upcoming">Upcoming</option>
-    </select>
+    <Form.Select
+      aria-label="Filter movies"
+      style={{ backgroundColor: "white", paddingLeft: "0.4rem" }}
+      labelId="filter"
+      value={filter}
+      onChange={(e) => setFilter({ filter: e.target.value })}
+    >
+      <option value={"popular"}>Popular</option>
+      <option value={"top_rated"}>Top Rated</option>
+      <option value={"upcoming"}>UpComing</option>
+    </Form.Select>
   );
 }
 

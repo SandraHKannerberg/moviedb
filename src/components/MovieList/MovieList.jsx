@@ -1,7 +1,7 @@
 import FilterDropDown from "../FilterDropDown/FilterDropDown";
 import MovieCard from "../MovieCard/MovieCard";
 import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import "./MovieList.css";
 
@@ -47,9 +47,7 @@ function MovieList() {
       </h2>
       <div className="movie_grid">
         {movies.map((movie) => (
-          <Link to={`${movie.id}`} key={movie.id}>
-            <MovieCard movie={movie} />
-          </Link>
+          <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
     </div>

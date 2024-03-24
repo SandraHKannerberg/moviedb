@@ -33,7 +33,8 @@ function MovieList() {
             gap: "0.5rem",
           }}
         >
-          <i className="fa-solid fa-filter"></i> Filter
+          <i className="fa-solid fa-filter"></i>
+          <span> Filter</span>
         </Col>
         <FilterDropDown
           filter={filterParams.get("filter")}

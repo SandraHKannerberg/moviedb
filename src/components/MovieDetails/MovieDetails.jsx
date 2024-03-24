@@ -50,7 +50,7 @@ function MovieDetails() {
           ) : null}
 
           {movie.status !== "Released" ? (
-            <p>Release Date: {movie.release_date}</p>
+            <div>Release Date: {movie.release_date}</div>
           ) : null}
         </div>
 

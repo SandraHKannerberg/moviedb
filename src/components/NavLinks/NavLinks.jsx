@@ -1,5 +1,5 @@
 import "./NavLinks.css";
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
 function NavLinks() {
   return (
@@ -16,7 +16,7 @@ function NavLinks() {
         <li>Contact</li>
       </NavLink>
     </ul>
-  )
+  );
 }
 
 export default NavLinks;

@@ -4,21 +4,51 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5rem;
+  padding: 0 4rem;
 }
 
-header h1 {
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.logotype {
   font-weight: 100;
 }
 
-header h1 > span {
+.logotype > span {
   font-weight: 400;
   color: #f8872a;
 }
 
-header > div {
+header > div > .right-content {
   display: flex;
   align-items: center;
 }
 
-  
+.hamburger-btn {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .menu {
+    display: none;
+  }
+
+  header {
+    padding: 0 2rem;
+  }
+
+  .hamburger-btn {
+    display: block;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    margin-left: 0;
+    border-radius: 5px;
+    border: 2px solid rgb(235, 235, 235);
+    background-color: rgb(48, 47, 66);
+    color: rgb(235, 235, 235);
+  }
+}

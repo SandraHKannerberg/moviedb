@@ -12,5 +12,13 @@ a {
 }
 
 .active {
-  border-bottom: 2px solid #FF7C60;
+  border-bottom: 2px solid #ff7c60;
+}
+
+@media screen and (max-width: 500px) {
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+  }
 }

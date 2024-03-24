@@ -1,11 +1,7 @@
 import { useState, useContext } from "react";
 import { Offcanvas, Button, Col } from "react-bootstrap";
-import "./SeenMovies.css";
-import { MovieContext } from "../../context/MovieContext";
 
-import { FiEye } from "react-icons/fi";
-
-function SeenMovies() {
+function Hamburgermenu() {
   const [show, setShow] = useState(false);
 
   const {
@@ -20,20 +16,7 @@ function SeenMovies() {
 
   return (
     <>
-      <div className="my_movies" onClick={handleShow}>
-        <p>{seenMoviesTotalQuantity}</p>
-        <FiEye />
-      </div>
-
-      <Offcanvas
-        show={show}
-        onHide={handleClose}
-        placement="end"
-        style={{
-          backgroundColor: "rgb(48, 47, 66)",
-          color: "rgb(235, 235, 235)",
-        }}
-      >
+      <Offcanvas show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Movies I have seen</Offcanvas.Title>
         </Offcanvas.Header>
@@ -69,7 +52,7 @@ function SeenMovies() {
           ))}
           {seenMoviesTotalQuantity > 0 ? (
             <Button
-              variant="outline-light"
+              variant="outline-secondary"
               onClick={clearSeenMovies}
               style={{
                 marginTop: "2rem",
@@ -84,4 +67,4 @@ function SeenMovies() {
   );
 }
 
-export default SeenMovies;
+export default Hamburgermenu;

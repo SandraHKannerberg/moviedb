@@ -1,4 +1,4 @@
-import Card from "react-bootstrap/Card";
+import { Card, Col } from "react-bootstrap";
 import MarkAsSeenBtn from "../MarkAsSeenBtn/MarkAsSeenBtn";
 import { Link } from "react-router-dom";
 import "./MovieCard.css";
@@ -25,7 +25,7 @@ function MovieCard({ movie }) {
         <Card.Title>
           <h6>{movie.original_title}</h6>
         </Card.Title>
-        <Card.Text
+        <Col
           style={{
             display: "flex",
             alignItems: "center",
@@ -33,14 +33,20 @@ function MovieCard({ movie }) {
             gap: "1rem",
           }}
         >
-          <div className="rating_info">
-            <p style={{ marginBottom: 0 }}>
-              <i className="fa-brands fa-imdb" style={{ fontSize: "2rem" }}></i>{" "}
-              {movie.vote_average.toFixed(1)}
-            </p>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "0.5rem",
+            }}
+          >
+            <i className="fa-brands fa-imdb" style={{ fontSize: "2rem" }}></i>{" "}
+            {movie.vote_average.toFixed(1)}
           </div>
+
           <MarkAsSeenBtn movie={movie} />
-        </Card.Text>
+        </Col>
       </Card.Body>
     </Card>
   );

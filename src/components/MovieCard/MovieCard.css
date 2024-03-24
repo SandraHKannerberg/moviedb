@@ -1,5 +1,6 @@
 .movie_card {
   position: relative;
+  min-width: 300px;
 }
 
 .movie_card_info {

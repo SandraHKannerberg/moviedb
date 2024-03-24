@@ -25,7 +25,7 @@ function SeenMovies() {
         <FiEye />
       </div>
 
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Movies I have seen</Offcanvas.Title>
         </Offcanvas.Header>
@@ -60,7 +60,13 @@ function SeenMovies() {
             </Col>
           ))}
           {seenMoviesTotalQuantity > 0 ? (
-            <Button variant="outline-secondary" onClick={clearSeenMovies}>
+            <Button
+              variant="outline-secondary"
+              onClick={clearSeenMovies}
+              style={{
+                marginTop: "2rem",
+              }}
+            >
               Clear the list
             </Button>
           ) : null}

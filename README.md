@@ -10,7 +10,7 @@ Copy GitHub-repo: https://github.com/SandraHKannerberg/moviedb.git
 
 Open a terminal and navigate to a folder on your computer where you want to save the project. Run command: </br>
 
-git clone https://github.com/SandraHKannerberg/moviedb.git
+    git clone https://github.com/SandraHKannerberg/moviedb.git
 
 Within the project run command:</br>
 

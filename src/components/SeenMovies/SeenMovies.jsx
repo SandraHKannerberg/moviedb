@@ -25,7 +25,15 @@ function SeenMovies() {
         <FiEye />
       </div>
 
-      <Offcanvas show={show} onHide={handleClose} placement="end">
+      <Offcanvas
+        show={show}
+        onHide={handleClose}
+        placement="end"
+        style={{
+          backgroundColor: "rgb(48, 47, 66)",
+          color: "rgb(235, 235, 235)",
+        }}
+      >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Movies I have seen</Offcanvas.Title>
         </Offcanvas.Header>
@@ -61,7 +69,7 @@ function SeenMovies() {
           ))}
           {seenMoviesTotalQuantity > 0 ? (
             <Button
-              variant="outline-secondary"
+              variant="outline-light"
               onClick={clearSeenMovies}
               style={{
                 marginTop: "2rem",

@@ -41,11 +41,19 @@ function MovieList() {
           setFilter={setFilterParams}
         />
       </div>
-      <h2>
-        {filterParams.get("filter") != "top_rated"
-          ? filterParams.get("filter") + " Movies"
-          : "Top Rated Movies"}
-      </h2>
+      <Col
+        style={{
+          width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <h3>
+          {filterParams.get("filter") != "top_rated"
+            ? filterParams.get("filter") + " Movies"
+            : "Top Rated Movies"}
+        </h3>
+      </Col>
       <div className="movie_grid">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
